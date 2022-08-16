@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
+import { mobile6 } from '../responsive'
+import Burger from './Burger2';
 
 const Container = styled.div`
     height:80px;
-    background-color: black; 
-
-    
-`;
+    background-color: black;   
+`
 const Wrapper =styled.div`
     padding: 10px 20px; 
     display:flex;
@@ -16,25 +16,11 @@ const Wrapper =styled.div`
 `
 
 const Left =styled.div`
-    flex:1;
+    // flex:1;
     display:flex;
     align-items:center;
+   
 `;
-
-// const Language = styled.div`
-//     font-size:14px;
-//     cursor:pointer;
-//     // display:flex;
-
-
-// `
-// const SearchContainer = styled.div`
-//     border:0.5px solid lightgray;
-//     display:flex;
-//     align-items:center;
-//     margin-left:25px;
-//     padding:5px;
-// ` 
 
 const Image = styled.img`
 width:50%;
@@ -42,11 +28,13 @@ height:8vh;
 object-fit:cover;
 `
 const Center =styled.div`
-    flex:3;
+    // flex:3;
     text-align:center;
     display:flex;
     align-items:center;
     justify-content:center;
+    ${mobile6({display:"none",flexFlow: "column nowrap",backgroundColor:"black",position:"fixed",top:"0px",right:"0",height:"100vh",width:"300px"})}
+
 `;
 
 const Part1 =styled.h1`
@@ -56,7 +44,7 @@ font-size:22px;
     justify-content:space-between;
     margin-right:27px;
     color:white;
-    
+    ${mobile6({padding:"20px 0px"})}
 
 `
 
@@ -66,7 +54,7 @@ font-size:22px;
     // display:flex;
     margin-right:27px;
     color:white;
-
+    ${mobile6({padding:"20px 0px"})}
 `
 const Part3 =styled.h1`
 font-size:22px;
@@ -74,6 +62,7 @@ font-size:22px;
     // display:flex;
     margin-right:27px;
     color:white;
+    ${mobile6({padding:"20px 0px"})}
 `
 const Part4 =styled.h1`
 font-size:22px;
@@ -81,16 +70,18 @@ font-size:22px;
     // display:flex;
     margin-right:27px;
     color:white;
+    ${mobile6({padding:"20px 0px"})}
 `
 
 
 
 
 const Right =styled.div`
-    flex:1;
+    // flex:1;
     display:flex;
     align-items:center;
     justify-content:flex-end;
+    ${mobile6({display:"none"})}
 
 `;
 
@@ -120,11 +111,11 @@ const Header = () => {
           <Wrapper>
               <Left>
                   <Image src="https://cdn.discordapp.com/attachments/891025496601661504/994320691656659057/unknown.png"/>
-                  {/* <SearchContainer>
-                      <Input placeholder="Search"/>
-                      <Search style={{color:"gray" , fontSize:16}}/>
-                  </SearchContainer> */}
+              
               </Left>
+              <Burger/>
+
+
               <Center>
                 <Part1>Home</Part1>
                 <Part2>About Us</Part2>
@@ -132,16 +123,12 @@ const Header = () => {
                 <Part4>Contact Us</Part4>
                 
               </Center>
+
+
               <Right>
                   <MenuItem>Made in India</MenuItem>
                   <Imge src="https://cdn.discordapp.com/attachments/891025496601661504/994337086209527960/9-2-india-flag-picture.png"/>
-                  {/* <span class="fi fi-IN"></span> */}
-                  {/* <MenuItem>SIGN IN</MenuItem> */}
-                  {/* <MenuItem>
-                      <Badge badgeContent={4} color="primary">
-                          <ShoppingCartOutlined/>
-                      </Badge>
-                  </MenuItem> */}
+                  
   
               </Right>
           </Wrapper>

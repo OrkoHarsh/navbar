@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { userData } from '../AboutData'
 import AbtComponent from './AbtComponent'
+import { mobile } from '../responsive'
+import { mobile3 } from '../responsive'
+
 const Container =styled.div`
 background-color:#1E1E1E;
 display:flex;
@@ -18,8 +21,11 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:#FFFFFF;
-margin-bottom:30px;
-margin-top:60px;
+margin-bottom:20px;
+margin-top:70px;
+${mobile({fontSize:"50px" , fontWeight:500})}
+${mobile3({fontSize:"24px" , fontWeight:700})}
+
 `
 const Wrapper =styled.div`
 // display:flex;

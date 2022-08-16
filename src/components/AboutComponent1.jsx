@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
+import { mobile3 } from '../responsive'
 
 
 const Container =styled.div`
 background-color:#1E1E1E;
 display:flex;
+// padding-top:50px;
 flex-direction:column;
 
 `
@@ -19,6 +22,9 @@ font-weight:700;
 font-family: 'Syne';
 font-size:60.3px;
 margin:15px 10px;
+${mobile({fontSize:"50px"})}
+${mobile3({fontSize:"30px"})}
+
 `
 
 const ImageContainer =styled.div`
@@ -30,10 +36,13 @@ const Image =styled.img`
 width:70%;
 // height:70vh;
 object-fit:cover;
+${mobile({width:"80%"})}
+
 `
 const InfoContainer =styled.div`
 background-color:white;
 border-radius:17px;
+display:none;
 box-shadow: -2.2309px 0.743634px 47.5926px -11.1545px #FFFFFF;
 width:55%;
 // display:flex;
@@ -41,12 +50,18 @@ width:55%;
 // align-items:center;
 margin:25px 25px;
 margin-left:20%;
+${mobile({marginTop:"40px"})}
+${mobile({marginBottom:"40px"})}
+${mobile3({width:"60%"})}
+
 `
 const Desc =styled.p`
 font-weight: 500;
 font-size: 20.309px;
 font-family: 'Inter';
 padding:20px;
+${mobile({fontSize:"15px"})}
+${mobile3({fontSize:"10px"})}
 `
 
 
@@ -61,7 +76,7 @@ const AboutComponent1 = () => {
         </Title>
 
         <ImageContainer>
-            <Image src="https://cdn.discordapp.com/attachments/992390118457483376/999010242862002186/unknown.png" />
+            <Image src="https://cdn.discordapp.com/attachments/891025496601661504/999952915928207420/unknown.png" />
         </ImageContainer>
 
         <InfoContainer>

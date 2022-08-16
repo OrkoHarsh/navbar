@@ -1,5 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
+import { mobile8 } from '../responsive'
+// import { mobile2 } from '../responsive'
+import { mobile3 } from '../responsive'
 
 const Container =styled.div`
 background-color:#1E1E1E;
@@ -17,7 +21,10 @@ const Image =styled.img`
 width:100%;
 height:7vh;
 margin-right:45px;
-
+${mobile({height:"4vh"})}
+${mobile({marginRight:"15px"})}
+${mobile8({height:"4vh",marginRight:"15px"})}
+${mobile3({height:"2.4vh",marginRight:"8px"})}
 `
 const Title =styled.h1`
 font-weight: 400;
@@ -25,6 +32,13 @@ font-size: 57.2598px;
 // line-height: 150%;
 display:flex;
 color:#FFFFFF;
+${mobile({fontSize:"40px", fontWeight:"500"})}
+${mobile8({fontSize:"40px", fontWeight:"500"})}
+${mobile3({fontSize:"20px", fontWeight:"500"})}
+
+
+
+
 `
 
 const RightImg =styled.div`
@@ -35,6 +49,9 @@ const Img =styled.img`
 width:100%;
 height:15vh;
 margin-left:-10px;
+${mobile({height:"10vh"})}
+${mobile8({height:"10vh"})}
+${mobile3({height:"6vh",marginLeft:"-8px"})}
 `
 const Desc =styled.p`
 display:flex;
@@ -45,7 +62,10 @@ font-weight: 400;
 font-size: 22.309px;
 line-height: 130%;
 color: #FFFFFF;
-padding:10px 30px;
+padding:10px 40px;
+${mobile({fontSize:"18px"})}
+${mobile({padding:"12px 40px"})}
+${mobile3({fontSize:"14px"})}
 
 `
 const Decs2 =styled.p`
@@ -59,6 +79,8 @@ line-height: 150%;
 color: #FFFFFF;
 padding:10px 0px;
 margin-top:10px;
+${mobile3({fontSize:"14px"})}
+
 `
 
 
